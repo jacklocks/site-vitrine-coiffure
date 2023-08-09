@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+header {
+  height: 100vh;
+  width: 100%;
+  display: block;
+  justify-content: center;
+  background: url(../../assets/img/photo-bg1.webp) center/cover no-repeat fixed;
+  & .header-title {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    z-index: 1;
+    & h1 {
+      font-family: $font1;
+      font-size: 5rem;
+      color: white;
+      font-weight: 100;
+      margin-top: 250px;
+      margin-bottom: 50px;
+      text-transform: capitalize;
+      @media screen and (max-width:320px) {
+        font-size: 2rem;
+        margin-top: 100px;
+      }
+    }
+    .link-button {
+      background: transparent;
+      &:hover {
+        background: transparent;
+      }
+      & button {
+        background: $tertiary;
+        color: $primary;
+        font-family: $font2;
+        font-weight: bold;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 10px;
+        border: none;
+        margin-bottom: 70px;
+        margin-top: 30px;
+        cursor: pointer;
+        &:hover {
+          background: $primary;
+          opacity: 0.7;
+          color: black;
+        }
+        @media screen and (max-width: 320px) {
+          padding: 7px;
+          font-size: 0.7rem;
+          margin-top: 10px;
+          margin-bottom: 50px;
+        }
+      }
+    }
+    & a {
+      text-align: center;
+      margin: 0 6px;
+      font-size: 0.8rem;
+      color: black;
+      background: white;
+      padding: 10px;
+      border-radius: 5px;
+      &:hover {
+        color: white;
+        background: black;
+      }
+      @media screen and (max-width:320px) {
+        font-size: 0.5rem;
+      }
+      }
+    }
+  }
+
+.mission {
+  height: 100vh;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  font-family: $font1;
+  & h2 {
+    font-size: 4rem;
+    font-family: $font1;
+    font-weight: 400;
+    margin-bottom: 60px;
+    text-transform: capitalize;
+    @media screen and (max-width: 320px) {
+      font-size: 2rem;
+      margin-top: 40px ;
+    }
+  }
+  & p {
+    width: 50%;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 60px;
+    @media screen and (max-width: 320px) {
+      width: 90%;
+      font-size: 1rem;
+    }
+  }
+  & button {
+    background: $tertiary;
+    color: $primary;
+    font-family: $font2;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px;
+    border: none;
+    margin-bottom: 70px;
+    margin-top: 30px;
+    cursor: pointer;
+    &:hover {
+      background: $primary;
+      color: black;
+      border: 1px solid black;
+    }
+    @media screen and (max-width: 320px) {
+      padding: 7px;
+      font-size: 0.7rem;
+    }
+  }
+}
+.services {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  background: url(../../assets/img/photo-bg2.webp) center/cover no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (max-width:320px) {
+    height: 130vh;
+  }
+  & h2 {
+    font-size: 4rem;
+    font-family: $font1;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: $primary;
+    margin-top: 100px;
+    @media screen and (max-width: 320px) {
+      font-size: 2rem;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
+  & .services-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    height: 60vh;
+    width: 70%;
+    @media screen and (max-width:320px) {
+      width: 90%;
+      margin-bottom: 10px;
+    }
+    & .services-card {
+      height: 200px;
+      width: 300px;
+      background: white;
+      opacity: 0.7;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      @media screen and (max-width:320px) {
+        height: 120px;
+        width: 120px;
+        margin: 2px;
+      }
+      & a {
+        font-size: 1.5rem;
+        color: black;
+        @media screen and (max-width: 320px) {
+          font-size: 0.5rem;
+        }
+      }
+      & h3 {
+        color: $tertiary;
+        font-family: $font2;
+        text-transform: uppercase;
+        font-size: 1rem;
+        @media screen and (max-width:320px) {
+          font-size: 0.6rem;
+        }
+      }
+      & p {
+        width: 80%;
+        margin-bottom: 20px;
+        font-family: $font1;
+        font-size: 1.2rem;
+        @media screen and (max-width:320px) {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+  button {
+    background: $tertiary;
+    color: $primary;
+    font-family: $font2;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px;
+    border: none;
+    margin-bottom: 70px;
+    margin-top: 30px;
+    cursor: pointer;
+    &:hover {
+      background: $primary;
+      color: black;
+    }
+    @media screen  and (max-width:320px) {
+      padding: 7px;
+      font-size: 0.7rem;
+      margin-bottom: 1px;
+      margin-top: 170px;
+    }
+  }
+}
+footer {
+  background:$primary;
+  text-align: center;
+  font-family: $font2;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  @media screen and (max-width:320px) {
+    font-size: 0.6rem;
+  }
+  & ul {
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  list-style-type: none;
+  opacity: 0.7;
+  }
+}

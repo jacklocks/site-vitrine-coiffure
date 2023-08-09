@@ -1,0 +1,125 @@
+.nav-hamburger {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & h2 {
+    color: $primary;
+    font-size: 2rem;
+    font-family: $font1;
+    margin: 30px 0 0 50px;
+    font-weight: 100;
+    position: fixed;
+    top: 0;
+  }
+}
+.navbar {
+  color: transparent;
+  position: fixed;
+  width: 100%;
+  min-height: 50vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+  transition: 0.5s;
+  top: 0;
+}
+.navbar.active {
+  transform: translate(0);
+  background: $primary;
+}
+.navbar a {
+  color: $secondary;
+  margin: 10px 0;
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-family: $font1;
+  display: block;
+  text-decoration: none;
+}
+.nav-toggler {
+  position: fixed;
+  top: 30px;
+  right: 50px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  z-index: 2;
+  @media screen and (max-width: 320px) {
+    width: 25px;
+    height: 20px;
+    top: 20px;
+    right: 20px;
+  }
+
+  & .line {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: $primary;
+    transition: transform 0.3s ease-out, opacity 0.1s ease-out;
+  }
+}
+.l1 {
+  transform: translateY(-10px);
+}
+.l3 {
+  transform: translateY(10px);
+}
+
+.bgColor {
+  background: $primary;
+  transform: translateY(-80%);
+  z-index: 1;
+}
+
+.active-line {
+  & .l1 {
+    transform: translateY(0px) rotate(135deg);
+    background: $secondary !important;
+  }
+  & .l2 {
+    opacity: 0;
+  }
+  & .l3 {
+    transform: translateY(0px) rotate(-135deg);
+    background: $secondary !important;
+  }
+}
+.active-name {
+  color: $secondary;
+}
+.active-color-line {
+  & .l1 {
+    background: $secondary !important;
+  }
+  & .l2 {
+    background: $secondary!important;
+  }
+  & .l3 {
+    background: $secondary !important;
+  }
+}
+@media screen and (max-width: 320px) {
+  .nav-hamburger {
+    & h2 {
+      font-size: 1.5rem;
+      margin: 20px 0 0 10px;
+    }
+  }
+  .navbar a {
+    font-size: 1.2rem;
+  }
+  
+  }

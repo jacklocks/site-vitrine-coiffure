@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "font1";
+  src: url(./assets/fonts/CormorantGaramond-Light.ttf);
+}
+@font-face {
+  font-family: "font2";
+  src: url(./assets/fonts/Raleway-Light.ttf);
+}
+
+$font1: font1;
+$font2: font2;
+
+$primary: white;
+$secondary: black;
+$tertiary: #d22630;

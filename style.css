@@ -1,0 +1,617 @@
+@font-face {
+  font-family: "font1";
+  src: url(./assets/fonts/CormorantGaramond-Light.ttf);
+}
+@font-face {
+  font-family: "font2";
+  src: url(./assets/fonts/Raleway-Light.ttf);
+}
+.nav-hamburger {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-hamburger h2 {
+  color: white;
+  font-size: 2rem;
+  font-family: font1;
+  margin: 30px 0 0 50px;
+  font-weight: 100;
+  position: fixed;
+  top: 0;
+}
+
+.navbar {
+  color: transparent;
+  position: fixed;
+  width: 100%;
+  min-height: 50vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+  transition: 0.5s;
+  top: 0;
+}
+
+.navbar.active {
+  transform: translate(0);
+  background: white;
+}
+
+.navbar a {
+  color: black;
+  margin: 10px 0;
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-family: font1;
+  display: block;
+  text-decoration: none;
+}
+
+.nav-toggler {
+  position: fixed;
+  top: 30px;
+  right: 50px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  z-index: 2;
+}
+@media screen and (max-width: 320px) {
+  .nav-toggler {
+    width: 25px;
+    height: 20px;
+    top: 20px;
+    right: 20px;
+  }
+}
+.nav-toggler .line {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: white;
+  transition: transform 0.3s ease-out, opacity 0.1s ease-out;
+}
+
+.l1 {
+  transform: translateY(-10px);
+}
+
+.l3 {
+  transform: translateY(10px);
+}
+
+.bgColor {
+  background: white;
+  transform: translateY(-80%);
+  z-index: 1;
+}
+
+.active-line .l1 {
+  transform: translateY(0px) rotate(135deg);
+  background: black !important;
+}
+.active-line .l2 {
+  opacity: 0;
+}
+.active-line .l3 {
+  transform: translateY(0px) rotate(-135deg);
+  background: black !important;
+}
+
+.active-name {
+  color: black;
+}
+
+.active-color-line .l1 {
+  background: black !important;
+}
+.active-color-line .l2 {
+  background: black !important;
+}
+.active-color-line .l3 {
+  background: black !important;
+}
+
+@media screen and (max-width: 320px) {
+  .nav-hamburger h2 {
+    font-size: 1.5rem;
+    margin: 20px 0 0 10px;
+  }
+  .navbar a {
+    font-size: 1.2rem;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 100vh;
+  width: 100%;
+  display: block;
+  justify-content: center;
+  background: url(../../assets/img/photo-bg1.webp) center/cover no-repeat fixed;
+}
+header .header-title {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  z-index: 1;
+}
+header .header-title h1 {
+  font-family: font1;
+  font-size: 5rem;
+  color: white;
+  font-weight: 100;
+  margin-top: 250px;
+  margin-bottom: 50px;
+  text-transform: capitalize;
+}
+@media screen and (max-width: 320px) {
+  header .header-title h1 {
+    font-size: 2rem;
+    margin-top: 100px;
+  }
+}
+header .header-title .link-button {
+  background: transparent;
+}
+header .header-title .link-button:hover {
+  background: transparent;
+}
+header .header-title .link-button button {
+  background: #d22630;
+  color: white;
+  font-family: font2;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px;
+  border: none;
+  margin-bottom: 70px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+header .header-title .link-button button:hover {
+  background: white;
+  opacity: 0.7;
+  color: black;
+}
+@media screen and (max-width: 320px) {
+  header .header-title .link-button button {
+    padding: 7px;
+    font-size: 0.7rem;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+}
+header .header-title a {
+  text-align: center;
+  margin: 0 6px;
+  font-size: 0.8rem;
+  color: black;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+header .header-title a:hover {
+  color: white;
+  background: black;
+}
+@media screen and (max-width: 320px) {
+  header .header-title a {
+    font-size: 0.5rem;
+  }
+}
+
+.mission {
+  height: 100vh;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  font-family: font1;
+}
+.mission h2 {
+  font-size: 4rem;
+  font-family: font1;
+  font-weight: 400;
+  margin-bottom: 60px;
+  text-transform: capitalize;
+}
+@media screen and (max-width: 320px) {
+  .mission h2 {
+    font-size: 2rem;
+    margin-top: 40px;
+  }
+}
+.mission p {
+  width: 50%;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 320px) {
+  .mission p {
+    width: 90%;
+    font-size: 1rem;
+  }
+}
+.mission button {
+  background: #d22630;
+  color: white;
+  font-family: font2;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 12px;
+  border: none;
+  margin-bottom: 70px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.mission button:hover {
+  background: white;
+  color: black;
+  border: 1px solid black;
+}
+@media screen and (max-width: 320px) {
+  .mission button {
+    padding: 7px;
+    font-size: 0.7rem;
+  }
+}
+
+.services {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  background: url(../../assets/img/photo-bg2.webp) center/cover no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width: 320px) {
+  .services {
+    height: 130vh;
+  }
+}
+.services h2 {
+  font-size: 4rem;
+  font-family: font1;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: white;
+  margin-top: 100px;
+}
+@media screen and (max-width: 320px) {
+  .services h2 {
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+.services .services-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  height: 60vh;
+  width: 70%;
+}
+@media screen and (max-width: 320px) {
+  .services .services-container {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+}
+.services .services-container .services-card {
+  height: 200px;
+  width: 300px;
+  background: white;
+  opacity: 0.7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+@media screen and (max-width: 320px) {
+  .services .services-container .services-card {
+    height: 120px;
+    width: 120px;
+    margin: 2px;
+  }
+}
+.services .services-container .services-card a {
+  font-size: 1.5rem;
+  color: black;
+}
+@media screen and (max-width: 320px) {
+  .services .services-container .services-card a {
+    font-size: 0.5rem;
+  }
+}
+.services .services-container .services-card h3 {
+  color: #d22630;
+  font-family: font2;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+@media screen and (max-width: 320px) {
+  .services .services-container .services-card h3 {
+    font-size: 0.6rem;
+  }
+}
+.services .services-container .services-card p {
+  width: 80%;
+  margin-bottom: 20px;
+  font-family: font1;
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 320px) {
+  .services .services-container .services-card p {
+    font-size: 0.7rem;
+  }
+}
+.services button {
+  background: #d22630;
+  color: white;
+  font-family: font2;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 12px;
+  border: none;
+  margin-bottom: 70px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.services button:hover {
+  background: white;
+  color: black;
+}
+@media screen and (max-width: 320px) {
+  .services button {
+    padding: 7px;
+    font-size: 0.7rem;
+    margin-bottom: 1px;
+    margin-top: 170px;
+  }
+}
+
+footer {
+  background: white;
+  text-align: center;
+  font-family: font2;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+@media screen and (max-width: 320px) {
+  footer {
+    font-size: 0.6rem;
+  }
+}
+footer ul {
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  list-style-type: none;
+  opacity: 0.7;
+}
+
+.slider-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.slider-container h2 {
+  font-size: 4rem;
+  font-family: font1;
+  font-weight: 400;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  text-transform: capitalize;
+}
+@media screen and (max-width: 320px) {
+  .slider-container h2 {
+    font-size: 2rem;
+    margin-top: 60px;
+  }
+}
+.slider-container #slider {
+  height: auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 1050px;
+  margin: 30px auto;
+  overflow: hidden;
+}
+@media screen and (max-width: 320px) {
+  .slider-container #slider {
+    width: 250px;
+    margin: 0 35px 0 0;
+  }
+}
+.slider-container #slider .image-container {
+  width: 350px;
+  flex: 0 0 350px;
+}
+.slider-container #slider .image-container .slide {
+  width: 100%;
+  padding: 40px;
+}
+.slider-container #previous,
+.slider-container #next {
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-100%);
+  background-color: transparent;
+  border: none;
+  color: #d22630;
+  cursor: pointer;
+}
+.slider-container #previous:hover,
+.slider-container #next:hover {
+  color: black;
+}
+@media screen and (max-width: 320px) {
+  .slider-container #previous,
+  .slider-container #next {
+    display: none;
+  }
+}
+.slider-container #previous {
+  left: 0;
+}
+.slider-container #next {
+  right: 0;
+}
+.slider-container button {
+  background: #d22630;
+  color: white;
+  font-family: font2;
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 12px;
+  border: none;
+  margin-bottom: 70px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.slider-container button:hover {
+  background: white;
+  opacity: 0.7;
+  color: black;
+  border: 1px solid black;
+}
+@media screen and (max-width: 320px) {
+  .slider-container button {
+    padding: 7px;
+    font-size: 0.7rem;
+  }
+}
+
+.contact {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: url(../../assets/img/photo-bg3.webp) center/cover no-repeat fixed;
+}
+@media screen and (max-width: 320px) {
+  .contact {
+    height: 120vh;
+  }
+}
+.contact h2 {
+  font-size: 4rem;
+  font-family: font1;
+  font-weight: 400;
+  margin: 50px;
+  text-transform: capitalize;
+  color: white;
+}
+@media screen and (max-width: 320px) {
+  .contact h2 {
+    font-size: 2rem;
+    margin-top: 60px;
+  }
+}
+.contact .contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 700px;
+  background: white;
+  opacity: 0.7;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 320px) {
+  .contact .contact-container {
+    width: 250px;
+  }
+}
+.contact .contact-container input,
+.contact .contact-container textarea,
+.contact .contact-container button {
+  margin: 20px 0;
+  width: 400px;
+  height: 40px;
+  text-align: center;
+  font-family: font2;
+  text-transform: uppercase;
+  outline: none;
+}
+@media screen and (max-width: 320px) {
+  .contact .contact-container input,
+  .contact .contact-container textarea,
+  .contact .contact-container button {
+    width: 200px;
+  }
+}
+.contact .contact-container textarea {
+  resize: none;
+  height: 200px;
+}
+.contact button {
+  background: #d22630;
+  color: white;
+  font-family: font2;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 12px;
+  border: none;
+  margin: 30px;
+  cursor: pointer;
+}
+.contact button:hover {
+  background: white;
+  opacity: 0.7;
+  color: black;
+}
+@media screen and (max-width: 320px) {
+  .contact button {
+    padding: 7px;
+    font-size: 0.7rem;
+  }
+}/*# sourceMappingURL=style.css.map */
