@@ -69,6 +69,12 @@ function SendMail() {
   let emailInput = document.getElementById("email");
   let messageInput = document.getElementById("message");
 
+  if (fullNameInput.value === "" || emailInput.value === "" || messageInput.value === "") {
+    alert("Veuillez remplir tous les champs avant d'envoyer le message.");
+    return;
+  }
+
+
   let params = {
     from_name: fullNameInput.value,
     email: emailInput.value,

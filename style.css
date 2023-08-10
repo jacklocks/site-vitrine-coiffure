@@ -22,6 +22,12 @@
   position: fixed;
   top: 0;
 }
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .nav-hamburger h2 {
+    font-size: 1.5rem;
+    margin: 20px 0 0 10px;
+  }
+}
 
 .navbar {
   color: transparent;
@@ -53,6 +59,11 @@
   display: block;
   text-decoration: none;
 }
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .navbar a {
+    font-size: 1.2rem;
+  }
+}
 
 .nav-toggler {
   position: fixed;
@@ -68,7 +79,7 @@
   background: transparent;
   z-index: 2;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .nav-toggler {
     width: 25px;
     height: 20px;
@@ -125,15 +136,6 @@
   background: black !important;
 }
 
-@media screen and (max-width: 320px) {
-  .nav-hamburger h2 {
-    font-size: 1.5rem;
-    margin: 20px 0 0 10px;
-  }
-  .navbar a {
-    font-size: 1.2rem;
-  }
-}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -148,26 +150,25 @@ header {
   background: url(../../assets/img/photo-bg1.webp) center/cover no-repeat fixed;
 }
 header .header-title {
-  display: block;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  height: auto;
+  height: 90vh;
   z-index: 1;
+  width: 100%;
 }
 header .header-title h1 {
   font-family: font1;
   font-size: 5rem;
   color: white;
   font-weight: 100;
-  margin-top: 250px;
-  margin-bottom: 50px;
   text-transform: capitalize;
+  margin-bottom: 40px;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   header .header-title h1 {
-    font-size: 2rem;
-    margin-top: 100px;
+    font-size: 2.5rem;
   }
 }
 header .header-title .link-button {
@@ -187,7 +188,6 @@ header .header-title .link-button button {
   padding: 10px;
   border: none;
   margin-bottom: 70px;
-  margin-top: 30px;
   cursor: pointer;
 }
 header .header-title .link-button button:hover {
@@ -195,7 +195,7 @@ header .header-title .link-button button:hover {
   opacity: 0.7;
   color: black;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   header .header-title .link-button button {
     padding: 7px;
     font-size: 0.7rem;
@@ -216,7 +216,7 @@ header .header-title a:hover {
   color: white;
   background: black;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   header .header-title a {
     font-size: 0.5rem;
   }
@@ -239,7 +239,7 @@ header .header-title a:hover {
   margin-bottom: 60px;
   text-transform: capitalize;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .mission h2 {
     font-size: 2rem;
     margin-top: 40px;
@@ -251,10 +251,15 @@ header .header-title a:hover {
   font-weight: 500;
   margin-bottom: 60px;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .mission p {
     width: 90%;
     font-size: 1rem;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .mission p {
+    width: 90%;
   }
 }
 .mission button {
@@ -276,7 +281,7 @@ header .header-title a:hover {
   color: black;
   border: 1px solid black;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .mission button {
     padding: 7px;
     font-size: 0.7rem;
@@ -293,9 +298,19 @@ header .header-title a:hover {
   flex-direction: column;
   align-items: center;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .services {
     height: 130vh;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .services {
+    height: 160vh;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .services {
+    height: 140vh;
   }
 }
 .services h2 {
@@ -306,11 +321,16 @@ header .header-title a:hover {
   color: white;
   margin-top: 100px;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .services h2 {
     font-size: 2rem;
     margin-top: 10px;
     margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .services h2 {
+    margin: 100px 0 40px;
   }
 }
 .services .services-container {
@@ -322,10 +342,20 @@ header .header-title a:hover {
   height: 60vh;
   width: 70%;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .services .services-container {
     width: 90%;
     margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .services .services-container {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1350px) {
+  .services .services-container {
+    width: 90%;
   }
 }
 .services .services-container .services-card {
@@ -338,20 +368,37 @@ header .header-title a:hover {
   justify-content: space-around;
   align-items: center;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .services .services-container .services-card {
     height: 120px;
     width: 120px;
     margin: 2px;
   }
 }
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .services .services-container .services-card {
+    height: 150px;
+    width: 200px;
+    margin: 4px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .services .services-container .services-card {
+    margin: 4px;
+  }
+}
 .services .services-container .services-card a {
   font-size: 1.5rem;
   color: black;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .services .services-container .services-card a {
     font-size: 0.5rem;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .services .services-container .services-card a {
+    font-size: 1rem;
   }
 }
 .services .services-container .services-card h3 {
@@ -360,9 +407,14 @@ header .header-title a:hover {
   text-transform: uppercase;
   font-size: 1rem;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .services .services-container .services-card h3 {
     font-size: 0.6rem;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .services .services-container .services-card h3 {
+    font-size: 0.8rem;
   }
 }
 .services .services-container .services-card p {
@@ -371,9 +423,14 @@ header .header-title a:hover {
   font-family: font1;
   font-size: 1.2rem;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .services .services-container .services-card p {
     font-size: 0.7rem;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .services .services-container .services-card p {
+    font-size: 1rem;
   }
 }
 .services button {
@@ -394,12 +451,22 @@ header .header-title a:hover {
   background: white;
   color: black;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .services button {
     padding: 7px;
     font-size: 0.7rem;
     margin-bottom: 1px;
     margin-top: 170px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .services button {
+    margin-top: 160px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .services button {
+    margin-top: 250px;
   }
 }
 
@@ -411,7 +478,7 @@ footer {
   font-size: 0.9rem;
   text-transform: capitalize;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   footer {
     font-size: 0.6rem;
   }
@@ -442,10 +509,15 @@ footer ul {
   margin-top: 40px;
   text-transform: capitalize;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .slider-container h2 {
     font-size: 2rem;
     margin-top: 60px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .slider-container h2 {
+    margin-top: 70px;
   }
 }
 .slider-container #slider {
@@ -457,10 +529,15 @@ footer ul {
   margin: 30px auto;
   overflow: hidden;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .slider-container #slider {
     width: 250px;
     margin: 0 35px 0 0;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 1050px) {
+  .slider-container #slider {
+    width: 350px;
   }
 }
 .slider-container #slider .image-container {
@@ -486,7 +563,7 @@ footer ul {
 .slider-container #next:hover {
   color: black;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .slider-container #previous,
   .slider-container #next {
     display: none;
@@ -518,7 +595,7 @@ footer ul {
   color: black;
   border: 1px solid black;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .slider-container button {
     padding: 7px;
     font-size: 0.7rem;
@@ -534,7 +611,7 @@ footer ul {
   align-items: center;
   background: url(../../assets/img/photo-bg3.webp) center/cover no-repeat fixed;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .contact {
     height: 120vh;
   }
@@ -547,10 +624,10 @@ footer ul {
   text-transform: capitalize;
   color: white;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .contact h2 {
     font-size: 2rem;
-    margin-top: 60px;
+    margin-top: 70px;
   }
 }
 .contact .contact-container {
@@ -564,9 +641,14 @@ footer ul {
   opacity: 0.7;
   margin-bottom: 30px;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .contact .contact-container {
     width: 250px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .contact .contact-container {
+    width: 400px;
   }
 }
 .contact .contact-container input,
@@ -580,11 +662,18 @@ footer ul {
   text-transform: uppercase;
   outline: none;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .contact .contact-container input,
   .contact .contact-container textarea,
   .contact .contact-container button {
     width: 200px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .contact .contact-container input,
+  .contact .contact-container textarea,
+  .contact .contact-container button {
+    width: 300px;
   }
 }
 .contact .contact-container textarea {
@@ -609,7 +698,7 @@ footer ul {
   opacity: 0.7;
   color: black;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .contact button {
     padding: 7px;
     font-size: 0.7rem;

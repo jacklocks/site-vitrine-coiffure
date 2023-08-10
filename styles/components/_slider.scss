@@ -5,9 +5,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  @media screen and (max-width:320px) {
-    
-  }
   & h2 {
     font-size: 4rem;
     font-family: $font1;
@@ -15,9 +12,12 @@
     margin-bottom: 40px;
     margin-top: 40px;
     text-transform: capitalize;
-    @media screen and (max-width:320px) {
+    @media screen and (min-width:320px) and (max-width:480px) {
       font-size: 2rem;
       margin-top: 60px;
+    }
+    @media screen and (min-width:481px) and (max-width:768px) {
+      margin-top: 70px;
     }
   }
   & #slider {
@@ -28,9 +28,12 @@
     width: 1050px;
     margin: 30px auto;
     overflow: hidden;
-    @media screen and (max-width:320px) {
+    @media screen and (min-width:320px) and (max-width:480px) {
       width: 250px;
       margin: 0 35px 0 0;
+    }
+    @media screen and (min-width:480px) and (max-width:1050px) {
+      width:350px
     }
 
     & .image-container {
@@ -55,7 +58,7 @@
     &:hover {
       color: black;
     }
-    @media screen and (max-width:320px) {
+    @media screen and (min-width:320px) and (max-width:480px) {
       display: none;
     }
   }
@@ -84,7 +87,7 @@
       color: black;
       border: 1px solid black;
     }
-    @media screen and (max-width:320px) {
+    @media screen and (min-width:320px) and (max-width:480px) {
       padding: 7px;
       font-size: 0.7rem;
     }
